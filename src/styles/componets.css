@@ -1,0 +1,39 @@
+@keyframes hero-animation {
+    from {
+      background-position-x: 0;
+    }
+  
+    to {
+      background-position-x: -192px;
+    }
+  }
+
+  @keyframes mineDemon-animation {
+    from {
+      background-position-x: 0;
+    }
+  
+    to {
+      background-position-x: -192px;
+    }
+  }
+
+  @keyframes Demon-animation {
+    from {
+      background-position-x: 0;
+    }
+  
+    to {
+      background-position-x: -384px;
+    }
+  }
+
+  @keyframes chest-animation {
+    from {
+      background-position-x: 0;
+    }
+  
+    to {
+      background-position-x: -192px;
+    }
+  }
