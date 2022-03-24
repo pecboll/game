@@ -3,6 +3,7 @@ import { Chest } from "./Chest";
 import { Demon } from "./Demon";
 import { Hero } from "./Hero";
 import { MineDemon } from "./MineDemon";
+import { Trap } from "./Trap";
 
 
 export function Borde() {
@@ -12,6 +13,7 @@ export function Borde() {
         <MineDemon />
         <Demon />
         <Chest />
+        <Trap />
 <img src='./assets/tileset.gif' alt='map' width={GAME_SIZE} height={GAME_SIZE} />
         </div>
 
