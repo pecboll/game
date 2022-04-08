@@ -13,32 +13,20 @@ export function Hero(props:Props) {
     <div  style={{
 
 position: 'absolute',
-top:  TILE_SIZE * heroPosition.y - 12 ,
+top:  TILE_SIZE * heroPosition.y ,
 left: TILE_SIZE * heroPosition.x,
-
 width: TILE_SIZE, 
-height: HEAD_SIZE,
+height: TILE_SIZE * 1.3,
+backgroundSize: TILE_SIZE * 4,
 backgroundImage:'url(./Assets/HERO.png)',
 backgroundRepeat: "no-repeat",
-backgroundPosition: `0 -${HEAD_OFFSET}px `,
+backgroundPosition: `0  -40px`,
 animation: 'hero-animation 0.4s steps(4) infinite',
-transform: `scaleX(${direction === EDirection.RIGHT ? 1 : -1 })`
-/*
-            position: 'absolute',
-            top:  TILE_SIZE * heroPosition.y - 12 ,
-            left: TILE_SIZE * heroPosition.x,
-
-            width: TILE_SIZE, 
-            height: HEAD_SIZE,
-            backgroundImage:'url(./Assets/hero.png)',
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: `0 -${HEAD_OFFSET}px `,
-            animation: 'hero-animation 0.4s steps(4) infinite' ,
-            transform: `scaleX(${ (direction === EDirection.LEFT) ? -1 : 1 }) `,
-            zIndex: 1,
-            color: 'yellow',
-            fontSize: '15px'
-*/            
+transform: `scaleX(${direction === EDirection.RIGHT ? 1 : -1 })`,
+zIndex: 1,
+color: 'yellow',
+fontSize: '15px'
+          
         }}>
          {counter}passos
         </div>

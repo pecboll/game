@@ -24,7 +24,7 @@ useInterval(function move() {
    setTimeout(() =>{ alert('Você morreu')});
    window.location.reload()
   }
-}, 300);
+}, 99900);
 
 return {enemyPosition, direction}
 }   export default useDemonMoviment;

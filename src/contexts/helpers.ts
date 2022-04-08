@@ -94,14 +94,14 @@ return result;
   if (type === ECanvas.DEMON) 
 
   return {
-   valid: canvasValue === ECanvas.FLOOR || canvasValue === ECanvas.HERO || canvasValue4 === ECanvas.FLOOR,
+   valid: canvasValue === ECanvas.FLOOR || canvasValue === ECanvas.HERO,
    dead: canvasValue === ECanvas.HERO || canvasValue4 === ECanvas.HERO  || canvasValue5 === ECanvas.HERO || canvasValue6 === ECanvas.HERO,
    chest: false,
    door: false,
   } 
 
   else return {
-   valid: canvasValue === ECanvas.FLOOR || canvasValue === ECanvas.HERO,
+   valid: canvasValue === ECanvas.FLOOR || canvasValue === ECanvas.HERO, 
    dead: canvasValue === ECanvas.HERO ,
    chest: false,
    door: false,

@@ -18,9 +18,10 @@ export function Demon(props:Props) {
       height: TILE_SIZE * 2,
       backgroundImage:'url(./Assets/DEMON.png)',
       backgroundRepeat: "no-repeat",
-      backgroundPosition: `0 -1px `,
+      backgroundPosition: `0 -0px `,
       animation: 'Demon-animation 0.7s steps(4) infinite',
-      transform: `scaleX(${direction === EDirection.RIGHT ? 1 : -1 })`
+      transform: `scaleX(${direction === EDirection.RIGHT ? 1 : -1 })`,
+      zIndex: 1,
   }}/>
     )
 }
