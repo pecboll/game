@@ -15,15 +15,16 @@ return match;
  })
     return(
         <div  style={{
-            position: 'absolute',
-            top:  TILE_SIZE * props.initialPosition.y,
-            left: TILE_SIZE * props.initialPosition.x,
+         
+         position: 'absolute',
+         top:  TILE_SIZE * props.initialPosition.y,
+         left: TILE_SIZE * props.initialPosition.x,
 
-            width: TILE_SIZE, 
-            height: TILE_SIZE,
-            backgroundImage:'url(./assets/CHEST.png)',
-            backgroundRepeat: "no-repeat",
-            animation: shouldAnimate && 'chest-animation 0.7s steps(3) forwards'
+         width: TILE_SIZE, 
+         height: TILE_SIZE,
+         backgroundImage:'url(./Assets/chest.png)',
+         backgroundRepeat: "no-repeat",
+         animation: shouldAnimate && 'chest-animation 0.7s steps(3)forwards'
         }}/>
     )
 }

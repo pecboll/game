@@ -11,13 +11,14 @@ export function Demon(props:Props) {
     
      <div  style={{
       position: 'absolute',
-      top:  TILE_SIZE * enemyPosition.y - 12,
+      top:  TILE_SIZE * enemyPosition.y ,
       left: TILE_SIZE * enemyPosition.x,
 
       width: TILE_SIZE * 2, 
       height: TILE_SIZE * 2,
       backgroundImage:'url(./Assets/DEMON.png)',
       backgroundRepeat: "no-repeat",
+      backgroundPosition: `0 -1px `,
       animation: 'Demon-animation 0.7s steps(4) infinite',
       transform: `scaleX(${direction === EDirection.RIGHT ? 1 : -1 })`
   }}/>
