@@ -16,7 +16,7 @@ export function Demon(props:Props) {
 
       width: TILE_SIZE, 
       height: HEAD_SIZE,
-      backgroundImage:'url(./Assets/MINI-DEMON.png)',
+      backgroundImage:'url(./Assets/DEMON.png)',
       backgroundRepeat: "no-repeat",
       backgroundPosition: `0 -${HEAD_OFFSET}px `,
       animation: 'mineDemon-animation 0.7s steps(4) infinite',
