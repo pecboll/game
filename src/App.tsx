@@ -12,7 +12,10 @@ function App() {
       style={{
         position: 'relative',
         width: GAME_SIZE,
-        height: GAME_SIZE
+        height: GAME_SIZE,
+        
+        backgroundImage: 'url(./Assets/tileset.gif)',
+        backgroundRepeat: 'no-repeat',
       }}
       > <Canvasprovider>
        <ChestProvider>

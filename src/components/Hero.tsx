@@ -24,7 +24,7 @@ export function Hero(props:Props) {
             transform: `scaleX(${ (direction === EDirection.LEFT) ? -1 : 1 }) `,
             zIndex: 1,
             color: 'yellow',
-            fontSize: '15px',
+            fontSize: '15px'
         }}>
          {counter}passos
         </div>
