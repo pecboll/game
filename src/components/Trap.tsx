@@ -1,13 +1,16 @@
 import '../styles/componets.css'
 import { TILE_SIZE, DEMON_TILE_SIZE } from '../settings/constants'
 
-export function Trap() {
+
+interface Props {initialPosition:{x:number, y:number}}
+
+export function Trap(props:Props) {
     return(
     
         <div  style={{
             position: 'absolute',
-            bottom:  TILE_SIZE * 2,
-            left: TILE_SIZE * 11,
+            top:  TILE_SIZE * props.initialPosition.y,
+            left: TILE_SIZE * props.initialPosition.x,
 
             width: TILE_SIZE, 
             height: TILE_SIZE,

@@ -1,48 +1,18 @@
 import '../styles/componets.css'
-import useEventListener from '@use-it/event-listener'
-import { HEAD_SIZE, TILE_SIZE, HEAD_OFFSET } from '../settings/constants'
-import { useState } from 'react'
 
-export function Hero() {
+import { HEAD_SIZE, TILE_SIZE, HEAD_OFFSET, EDirection } from '../settings/constants'
+import useHeroMoviment from '../hooks/heroMoviment'
+import { ECanvas } from '../contexts/helpers'
 
-    const [heroPosition, setHeroPosition] = useState({x: 15, y: 14});
-    const [direction, setDirection] = useState('RIGHT');
+interface Props {initialPosition:{x:number, y:number}}
 
-    useEventListener('keydown', (event:{key: string}) => {
-        if (event.key === 'ArrowLeft' ){
-        setHeroPosition({
-            x: heroPosition.x - 1,
-            y: heroPosition.y
-        });  setDirection('LEFT'); 
-    }
-
-        if (event.key === 'ArrowRight' ){
-            setHeroPosition({
-                x: heroPosition.x + 1,
-                y: heroPosition.y
-            }); setDirection('RIGHT');  
-        }
-
-        if (event.key === 'ArrowDown' ){
-            setHeroPosition({
-                x: heroPosition.x ,
-                y: heroPosition.y- 1
-            })  
-        }
-
-        if (event.key === 'ArrowUp' ){
-            setHeroPosition({
-                x: heroPosition.x ,
-                y: heroPosition.y + 1
-            })  
-        }
-});
-
+export function Hero(props:Props) {
+ const {heroPosition, direction, counter} = useHeroMoviment(props.initialPosition, ECanvas.HERO)
     return(
-    
-        <div  style={{
+    <>
+    <div  style={{
             position: 'absolute',
-            bottom:  TILE_SIZE * heroPosition.y,
+            top:  TILE_SIZE * heroPosition.y - 12 ,
             left: TILE_SIZE * heroPosition.x,
 
             width: TILE_SIZE, 
@@ -50,9 +20,15 @@ export function Hero() {
             backgroundImage:'url(./assets/hero.png)',
             backgroundRepeat: "no-repeat",
             backgroundPosition: `0 -${HEAD_OFFSET}px `,
-            transition:' 0.2s',
-            animation: 'hero-animation 0.4s steps(4) infinite',
-            transform: `scaleX(${direction === 'RIGHT' ? 1 : -1 })`
-        }}/>
+            animation: 'hero-animation 0.4s steps(4) infinite' ,
+            transform: `scaleX(${ (direction === EDirection.LEFT) ? -1 : 1 }) `,
+            zIndex: 1,
+            color: 'yellow',
+            fontSize: '15px',
+        }}>
+         {counter}passos
+        </div>
+    </>
+        
     )
 }

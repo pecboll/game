@@ -1,7 +1,9 @@
-import React from 'react';
 import './styles/App.css';
-import { Borde } from './components/Borde';
+import  {Borde}  from './components/Borde';
 import { GAME_SIZE } from './settings/constants';
+import { Debuger } from './components/debugger/Debugger';
+import Canvasprovider from './contexts/canvas';
+import ChestProvider from './contexts/chest';
 
 function App() {
   return (
@@ -12,8 +14,13 @@ function App() {
         width: GAME_SIZE,
         height: GAME_SIZE
       }}
-      >
+      > <Canvasprovider>
+       <ChestProvider>
+       <Debuger />
         <Borde />
+       </ChestProvider>
+      </Canvasprovider>
+       
       </div>
     
     </div>
