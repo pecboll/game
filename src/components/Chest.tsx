@@ -22,7 +22,7 @@ return match;
 
          width: TILE_SIZE, 
          height: TILE_SIZE,
-         backgroundImage:'url(./Assets/chest.png)',
+         backgroundImage:'url(./Assets/CHEST.png)',
          backgroundRepeat: "no-repeat",
          animation: shouldAnimate && 'chest-animation 0.7s steps(3)forwards'
         }}/>

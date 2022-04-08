@@ -18,7 +18,7 @@ left: TILE_SIZE * heroPosition.x,
 
 width: TILE_SIZE, 
 height: HEAD_SIZE,
-backgroundImage:'url(./Assets/hero.png)',
+backgroundImage:'url(./Assets/HERO.png)',
 backgroundRepeat: "no-repeat",
 backgroundPosition: `0 -${HEAD_OFFSET}px `,
 animation: 'hero-animation 0.4s steps(4) infinite',
@@ -30,7 +30,7 @@ transform: `scaleX(${direction === EDirection.RIGHT ? 1 : -1 })`
 
             width: TILE_SIZE, 
             height: HEAD_SIZE,
-            backgroundImage:'url(./assets/hero.png)',
+            backgroundImage:'url(./Assets/hero.png)',
             backgroundRepeat: "no-repeat",
             backgroundPosition: `0 -${HEAD_OFFSET}px `,
             animation: 'hero-animation 0.4s steps(4) infinite' ,

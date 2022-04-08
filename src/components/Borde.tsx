@@ -51,12 +51,12 @@ export function Borde() {
         <div>
         {elements}
         {chestsContext.totalChest === chestsContext.openedChets.total && (
-         <img src="./assets/door-open.png" alt="door open" style={{
+         <img src="./Assets/DOOR-OPEN.png" alt="door open" style={{
          position: 'absolute',
          left: 578
         }} /> 
         )}
-{/* <img src='./assets/tileset.gif' alt='map' width={GAME_SIZE} height={GAME_SIZE} /> */}
+{ <img src='./Assets/TILESET.gif' alt='map' width={GAME_SIZE} height={GAME_SIZE} /> }
         </div>
 
     );

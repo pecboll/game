@@ -14,7 +14,7 @@ export function Trap(props:Props) {
 
             width: TILE_SIZE, 
             height: TILE_SIZE,
-            backgroundImage:'url(./assets/TRAP.png)',
+            backgroundImage:'url(./Assets/TRAP.png)',
             backgroundRepeat: "no-repeat",
             animation: 'trap-animation 0.6s steps(8) infinite'
         }}/>
