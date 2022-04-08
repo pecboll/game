@@ -1,5 +1,5 @@
 import '../styles/componets.css'
-import { TILE_SIZE, DEMON_TILE_SIZE, EDirection } from '../settings/constants'
+import { TILE_SIZE, DEMON_TILE_SIZE, EDirection, HEAD_SIZE, HEAD_OFFSET } from '../settings/constants'
 import useDemonMoviment from '../hooks/enemyMoviment'
 import { ECanvas } from '../contexts/helpers'
 
@@ -9,18 +9,18 @@ export function Demon(props:Props) {
  const {enemyPosition, direction} = useDemonMoviment(props.initialPosition, ECanvas.DEMON)
     return(
     
-        <div  style={{
-            position: 'absolute',
-            top: TILE_SIZE * enemyPosition.y,
-            left: TILE_SIZE * enemyPosition.x,
+     <div  style={{
+      position: 'absolute',
+      top:  TILE_SIZE * enemyPosition.y - 12,
+      left: TILE_SIZE * enemyPosition.x,
 
-            width: DEMON_TILE_SIZE, 
-            height: DEMON_TILE_SIZE,
-            backgroundImage:'url(./assets/DEMON.png)',
-            backgroundRepeat: "no-repeat",
-            animation: 'Demon-animation 0.5s steps(4) infinite',
-            zIndex: 1,
-            transform: `scaleX(${direction === EDirection.RIGHT ? 1 : -1 })`
-        }}/>
+      width: TILE_SIZE, 
+      height: HEAD_SIZE,
+      backgroundImage:'url(./Assets/MINI-DEMON.png)',
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: `0 -${HEAD_OFFSET}px `,
+      animation: 'mineDemon-animation 0.7s steps(4) infinite',
+      transform: `scaleX(${direction === EDirection.RIGHT ? 1 : -1 })`
+  }}/>
     )
 }
